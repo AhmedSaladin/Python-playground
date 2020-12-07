@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/',include('blog.urls')),
+    # All paths created in blog.urls is after blog path blog/(any new route)
+    path('', include('blog.urls')),
 ]
