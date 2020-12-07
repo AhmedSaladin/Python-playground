@@ -1,5 +1,5 @@
-# Python
-This repo is for python project to explore the capability of python and it's framework such as Django, Pygame, Flask and more
+# Python Playground
+This repo is for python project to explore the capability of python and it's framework such as Django, Pygame, Flask, etc.
 
 ## References
 <ul>
