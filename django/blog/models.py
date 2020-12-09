@@ -5,8 +5,11 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
-    author = models.ForeignKey(User,on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     content = models.TextField()  # textfield is just unrestricted text.
-    date_posted = models.DateTimeField(default= timezone.now)
+    date_posted = models.DateTimeField(default=timezone.now)
 
+    def __str__(self):
+        # Dunder method to return object title.
+        return self.title
