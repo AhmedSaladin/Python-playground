@@ -4,21 +4,26 @@ from django.shortcuts import render
 
 # Create dummy data to test
 posts = [{
-    'author': 'coryMs',
-    'title': 'post 1',
+    'author': 'CoryMs',
+    'title': 'Post 1',
     'content': 'First post content',
-    'date_posted': 'august 27,2018'
+    'date_posted': 'August 27,2018'
 },
     {
     'author': 'Jane Doe',
-    'title': 'post 12',
+    'title': 'Post 2',
     'content': 'Second post content',
-    'date_posted': 'august 28,2018'
+    'date_posted': 'August 28,2018'
 }]
 
 
 def home(req):
-    return render(req, 'blog/home.html')
+    # context is passing data to template.
+    context = {
+        'posts': posts
+    }
+
+    return render(req, 'blog/home.html', context)
 
 
 def about(req):
