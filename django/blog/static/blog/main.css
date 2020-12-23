@@ -88,6 +88,6 @@ body {
     width: 40px;
     margin-right: 12px;
     margin-bottom: 5px;
-    vertical-align: -moz-middle-with-baseline;
-    border-style: groove;
+    vertical-align: -webkit-baseline-middle;
+    border-style: double;
   }
