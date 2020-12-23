@@ -123,7 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 # Change crispy package default styles
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # Change login default redirect page
 LOGIN_REDIRECT_URL = 'blog-home'
+
+# Set login default page
+LOGIN_URL ='login'
