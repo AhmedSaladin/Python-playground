@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -124,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Change media directory
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 # Change crispy package default styles
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -131,4 +136,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 
 # Set login default page
-LOGIN_URL ='login'
+LOGIN_URL = 'login'
