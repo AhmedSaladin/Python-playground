@@ -137,3 +137,11 @@ LOGIN_REDIRECT_URL = 'blog-home'
 
 # Set login default page
 LOGIN_URL = 'login'
+
+# Email setup 
+EMAIL_BACKEND = 'django.core.email.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
