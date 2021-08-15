@@ -1,15 +1,15 @@
 # Lesson Summary
 
-here's a recap of the data types and operators we covered.
+Here's a recap of the data types and operators we covered.
 
 ## Data Types
 
-| Data Type | Constructor |      Example       |
-| :-------: | :---------: | :----------------: |
-|    int    |    int()    |         5          |
-|   float   |   float()   |        6.5         |
-|  string   | '',"",str() | "this is a string" |
-|   bool    |   bool()    |   true or false    |
+| Data Type | Constructor    |      Example       |
+| :-------: | :---------:    | :----------------: |
+|    int    |    int( )      |         5          |
+|   float   |   float( )     |        6.5         |
+|  string   | ' '," ",str( ) | "this is a string" |
+|   bool    |   bool( )      |   true or false    |
 
 
 ## Operators
