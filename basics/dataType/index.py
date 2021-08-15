@@ -77,7 +77,24 @@ wed_sales = "110"
 thurs_sales = "98"
 fri_sales = "95"
 
-#TODO: Print a string with this format: This week's total sales: xxx
+# TODO: Print a string with this format: This week's total sales: xxx
 # You will probably need to write some lines of code before the print statement.
-week_total_sales= int(mon_sales)+int(tues_sales)+int(wed_sales)+int(thurs_sales)+int(fri_sales)
-print("This week's total sales: "+str(week_total_sales))
+week_total_sales = (
+    int(mon_sales)
+    + int(tues_sales)
+    + int(wed_sales)
+    + int(thurs_sales)
+    + int(fri_sales)
+)
+print("This week's total sales: " + str(week_total_sales))
+
+
+verse = "If you can keep your head when all about you\n  Are losing theirs and blaming it on you,\nIf you can trust yourself when all men doubt you,\n  But make allowance for their doubting too;\nIf you can wait and not be tired by waiting,\n  Or being lied about, don’t deal in lies,\nOr being hated, don’t give way to hating,\n  And yet don’t look too good, nor talk too wise:"
+# What is the length of the string variable verse?
+print(len(verse))
+# What is the index of the first occurrence of the word 'and' in verse?
+print(verse.index("and"))
+# What is the index of the last occurrence of the word 'you' in verse?
+print(verse.rindex("you"))
+# What is the count of occurrences of the word 'you' in the verse?
+print(verse.count("you"))
