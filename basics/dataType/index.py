@@ -20,7 +20,7 @@ reservoir_volume = 4.445e8
 rainfall = 5e6
 
 # decrease the rainfall variable by 10% to account for runoff
-rainfall *= .9
+rainfall *= 0.9
 
 # add the rainfall variable to the reservoir_volume variable
 reservoir_volume += rainfall
@@ -34,7 +34,7 @@ reservoir_volume *= 0.95
 
 # subtract 2.5e5 cubic metres from reservoir_volume to account for water
 # that's piped to arid regions.
-reservoir_volume -= 2.5e5 
+reservoir_volume -= 2.5e5
 
 # print the new value of the reservoir_volume variable
 print(reservoir_volume)
@@ -42,8 +42,17 @@ print(reservoir_volume)
 sf_population, sf_area = 864816, 231.89
 rio_population, rio_area = 6453682, 486.5
 
-san_francisco_pop_density = sf_population/sf_area
-rio_de_janeiro_pop_density = rio_population/rio_area
+san_francisco_pop_density = sf_population / sf_area
+rio_de_janeiro_pop_density = rio_population / rio_area
 
 # Write code that prints True if San Francisco is denser than Rio, and False otherwise
-print (san_francisco_pop_density>rio_de_janeiro_pop_density)
+print(san_francisco_pop_density > rio_de_janeiro_pop_density)
+
+username = "Kinari"
+timestamp = "04:50"
+url = "http://petshop.com/pets/mammals/cats"
+
+# TODO: print a log message using the variables above.
+# The message should have the same format as this one:
+# "Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20."
+print(username + " accessed the site " + url + " at " + timestamp + ".")
