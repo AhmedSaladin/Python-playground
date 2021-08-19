@@ -86,3 +86,13 @@ else:
     result = "Oh dear, no prize this time."
 
 print(result)
+
+
+names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+usernames = []
+
+# write your for loop here
+for name in names:
+    usernames.append(name.replace(" ","_").lower())
+
+print(usernames)
