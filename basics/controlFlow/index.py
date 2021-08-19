@@ -103,3 +103,15 @@ usernames = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"
 for name in range(len(usernames)):
     usernames[name]=usernames[name].replace(" ","_").lower()
 print(usernames)
+
+
+tokens = ['<greeting>', 'Hello World!', '</greeting>']
+count = 0
+
+# write your for loop here
+for tag in tokens:
+    print(tag)
+    if tag.startswith("<") and tag.endswith(">"):
+        count+=1
+
+print(count)
