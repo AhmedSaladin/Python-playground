@@ -979,3 +979,31 @@ for year, names in winners.items():
 
 
 print("win_count_dict = {}".format(win_count_dict))
+
+
+
+### For Question 2: Please provide a list with the name(s) of the director(s) with 
+### the most Oscar wins. The list can hold the names of multiple directors,
+### since there can be more than 1 director tied with the most Oscar wins.
+
+# Add your code here
+win_count_dict = {}
+for year, winnerlist in winners.items():
+    for winner in winnerlist:
+        win_count_dict[winner] = win_count_dict.get(winner, 0) + 1
+        
+        
+highest_count = 0
+most_win_director = []
+
+for key, value in win_count_dict.items():
+    if value > highest_count:
+        highest_count = value
+        most_win_director.clear()
+        most_win_director.append(key)
+    elif value == highest_count:
+        most_win_director.append(key)
+    else:
+        continue
+print(win_count_dict)
+print("most_win_director = {}".format(most_win_director))
