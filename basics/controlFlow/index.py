@@ -279,8 +279,8 @@ cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
 cast_heights = [72, 68, 72, 66, 76]
 
 cast = {}
-for key,value in zip(cast_names,cast_heights):
-    cast[key]=value
+for key, value in zip(cast_names, cast_heights):
+    cast[key] = value
 print(cast)
 
 
@@ -289,8 +289,8 @@ print(cast)
 cast = (("Barney", 72), ("Robin", 68), ("Ted", 72), ("Lily", 66), ("Marshall", 76))
 
 # define names and heights here
-names,heights=[],[]
-names,heights =zip(*cast)
+names, heights = [], []
+names, heights = zip(*cast)
 
 
 print(names)
@@ -301,11 +301,26 @@ print(heights)
 # Use enumerate to modify the cast list so that each element contains the name followed by the character's corresponding height.
 #  For example, the first element of cast should change from "Barney Stinson" to "Barney Stinson 72".
 
-cast = ["Barney Stinson", "Robin Scherbatsky", "Ted Mosby", "Lily Aldrin", "Marshall Eriksen"]
+cast = [
+    "Barney Stinson",
+    "Robin Scherbatsky",
+    "Ted Mosby",
+    "Lily Aldrin",
+    "Marshall Eriksen",
+]
 heights = [72, 68, 72, 66, 76]
 
 # write your for loop here
-for i,height in enumerate(heights):
-    cast[i]+=" "+str(height)
+for i, height in enumerate(heights):
+    cast[i] += " " + str(height)
 
 print(cast)
+
+
+# Quiz: Extract First Names
+# Use a list comprehension to create a new list first_names containing just the first names in names in lowercase.
+
+names = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smith"]
+
+first_names = [name.lower() for name in names]
+print(first_names)
