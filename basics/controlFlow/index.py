@@ -282,3 +282,16 @@ cast = {}
 for key,value in zip(cast_names,cast_heights):
     cast[key]=value
 print(cast)
+
+
+# Quiz: Unzip Tuples
+# Unzip the cast tuple into two names and heights tuples.
+cast = (("Barney", 72), ("Robin", 68), ("Ted", 72), ("Lily", 66), ("Marshall", 76))
+
+# define names and heights here
+names,heights=[],[]
+names,heights =zip(*cast)
+
+
+print(names)
+print(heights)
