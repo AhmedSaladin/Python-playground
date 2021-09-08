@@ -26,9 +26,11 @@ def hand_rank(hand):
         return (0, ranks)
 
 
-def card_ranks(hand):
-    "returns an ORDERED tuple of the ranks in a hand (where the order goes from highest to lowest rank)"
-    return
+def card_ranks(cards):
+    "Return a list of the ranks, sorted with higher first"
+    ranks = ["--23456789TJQKA".index(r) for r, s in cards]
+    ranks.sort(reverse=True)
+    return ranks
 
 
 def straight(ranks):
