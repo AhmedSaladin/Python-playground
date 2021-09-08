@@ -54,8 +54,14 @@ def kind(n, ranks):
 
 
 def two_pair(ranks):
-    """if there is a two pair, this function returns their corresponding ranks as a tuple. For example, a hand with 2 twos and 2 fours would cause this function to return (4, 2)"""
-    return
+    """If there are two pair, returns the two ranks as
+    a tuple: (highest, lowest); otherwise return None"""
+    pair = kind(2, ranks)
+    lowPair = kind(2, list(reversed(ranks)))
+    if pair and lowPair != pair:
+        return tuple(pair, lowPair)
+    else:
+        return None
 
 
 def test():
