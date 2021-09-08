@@ -45,12 +45,16 @@ def flush(hand):
 
 
 def kind(n, ranks):
-    "returns the first rank that the hand has exactly n of. For A hand with 4 sevens this function would return 7"
-    return
+    """Returns the first rank that this hand has exactly n of.
+    Return None if there is no n-of-a-kind in the hand."""
+    for r in ranks:
+        if ranks.count(r) == n:
+            return r
+    return None
 
 
 def two_pair(ranks):
-    "if there is a two pair, this function returns their corresponding ranks as a tuple. For example, a hand with 2 twos and 2 fours would cause this function to return (4, 2)"
+    """if there is a two pair, this function returns their corresponding ranks as a tuple. For example, a hand with 2 twos and 2 fours would cause this function to return (4, 2)"""
     return
 
 
