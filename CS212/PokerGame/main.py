@@ -34,8 +34,8 @@ def card_ranks(cards):
 
 
 def straight(ranks):
-    "returns True if the hand is a straight"
-    return
+    "Returns True if the hand is a straight"
+    return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
 
 
 def flush(hand):
