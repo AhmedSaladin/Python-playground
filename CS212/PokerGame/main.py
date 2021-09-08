@@ -55,10 +55,20 @@ def two_pair(ranks):
 
 
 def test():
-    "Test case for poker function"
+    "Test cases for poker game functions"
     sf = "6C 7C 8C 9C TC".split()
     fk = "9D 9H 9S 9C 7D".split()
     fh = "TD TC TH 7C 7D".split()
+    tp = "5S 5D 9H 9C 6S".split()
+    fkRanks = card_ranks(fk)
+    tpRanks = card_ranks(tp)
+
+    assert kind(4, fkRanks) == 9
+    assert kind(3, fkRanks) == None
+    assert kind(2, fkRanks) == None
+    assert kind(1, fkRanks) == 7
+
+    
 
     assert straight([9, 8, 7, 6, 5]) == True
     assert straight([9, 8, 8, 6, 5]) == False
