@@ -34,13 +34,14 @@ def card_ranks(cards):
 
 
 def straight(ranks):
-    "Returns True if the hand is a straight"
+    "Returns True if the ordered ranks from a 5-card straight"
     return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
 
 
 def flush(hand):
-    "returns True if the hand is a flush"
-    return
+    "Returns True if all the cards have the same suit"
+    suits = [s for r, s in hand]
+    return len(set(suits)) == 1
 
 
 def kind(n, ranks):
