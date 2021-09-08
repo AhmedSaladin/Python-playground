@@ -4,6 +4,7 @@ def poker(hands):
 
 
 def hand_rank(hand):
+    "Return a value indicating the ranking of a hand"
     return
 
 
