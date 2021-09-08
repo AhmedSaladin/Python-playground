@@ -68,7 +68,8 @@ def test():
     assert kind(2, fkRanks) == None
     assert kind(1, fkRanks) == 7
 
-    
+    assert two_pair(fkRanks) == None
+    assert two_pair(tpRanks) == (9, 5)
 
     assert straight([9, 8, 7, 6, 5]) == True
     assert straight([9, 8, 8, 6, 5]) == False
