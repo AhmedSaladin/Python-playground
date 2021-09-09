@@ -1,3 +1,13 @@
+import random
+
+mydeck = [r + s for r in "23456789TJQKA" for s in "SHDC"]
+
+
+def deal(numhands, n=5, deck=mydeck):
+    random.shuffle(deck)
+    return [deck[n * hand : n * (hand + 1)] for hand in range(numhands)]
+
+
 def poker(hands):
     "Return a list of winning hands: poker([hand,...])=>[hand,...]"
     return allMax(max(hands, key=hand_rank))
