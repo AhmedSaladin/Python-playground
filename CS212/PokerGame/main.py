@@ -1,5 +1,5 @@
 def poker(hands):
-    "Return the best hand: poker([hand,...])=>hand"
+    "Return a list of winning hands: poker([hand,...])=>[hand,...]"
     return allMax(max(hands, key=hand_rank))
 
 
