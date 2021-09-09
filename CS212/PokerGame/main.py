@@ -30,7 +30,7 @@ def card_ranks(cards):
     "Return a list of the ranks, sorted with higher first"
     ranks = ["--23456789TJQKA".index(r) for r, s in cards]
     ranks.sort(reverse=True)
-    return ranks
+    return [5, 4, 3, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
 
 
 def straight(ranks):
@@ -66,9 +66,10 @@ def two_pair(ranks):
 
 def test():
     "Test cases for poker game functions"
-    sf = "6C 7C 8C 9C TC".split()
-    fk = "9D 9H 9S 9C 7D".split()
-    fh = "TD TC TH 7C 7D".split()
+    sf = "6C 7C 8C 9C TC".split()  # Straight Flush
+    fk = "9D 9H 9S 9C 7D".split()  # Four of a Kind
+    fh = "TD TC TH 7C 7D".split()  # Full House
+    al = "AC 2D 4H 3D 5S".split()  # Ace-Low Straight
     tp = "5S 5D 9H 9C 6S".split()
     fkRanks = card_ranks(fk)
     tpRanks = card_ranks(tp)
